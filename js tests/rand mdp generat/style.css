@@ -1,0 +1,32 @@
+body{
+    display: block;
+    text-align: center;
+    font-family: 'poppins' , sans-serif; 
+    font-weight: bold;
+}
+
+button{
+    margin: 20px;
+    padding: 7px;
+    border-radius:5px ;
+    border: none;
+    background-color: hsl(0, 46%, 47%);
+    cursor: pointer;
+}
+button:hover{
+    background-color: hsl(0, 46%, 57%);
+}
+button:active{
+    background-color: hsl(0, 0%, 100%);
+}
+
+#mdplen{
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 18px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 90px;
+}

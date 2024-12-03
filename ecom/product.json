@@ -1,0 +1,57 @@
+[
+    {
+    "product1":{
+        "name": "GAMER HEADSET RAZER BLACKSHARK V2 X",
+        "price": 620.00,
+        "stock": 50,
+        "image": "p1.jpg",
+        "product_id": "prod_RIoa7SHKOTp9G9",
+        "price_id":"price_1QQCysDKgovMDMcPRvkAYcgg"
+    }
+    },
+    {
+    "product2":{
+        "name": "Microphones Blue Yeti X professionnel USB",
+        "price": 1900.00,
+        "stock": 10,
+        "image": "p2.jpg",
+        "product_id": "prod_RIodFjsiKVVdPK"},
+        "price_id":"price_1QQD0fDKgovMDMcP1NiFkvgj"
+    },
+    {
+    "product3":{
+
+        "name": "Souris Gamer LOGITECH G102",
+        "price": 200.00,
+        "stock": 100,
+        "image": "p3.jpg",
+        "product_id": "prod_RIoe1FkfRxPFdL"},
+        "price_id":"price_1QQD1WDKgovMDMcPPTCaVLFN"
+    },
+    {
+    "product4":{
+        "name": "MSI Optix G2412F 24 IPS",
+        "price": 1849.00,
+        "stock": 80,
+        "image": "p4.jpg",
+        "product_id": "prod_RIofonCPPUnbcT"},
+        "price_id":"price_1QQD2CDKgovMDMcPZREmFzMt"
+    },
+    {
+        "product5":{
+        "name": "Casque Gamer MSI GH20",
+        "price": 450.00,
+        "stock": 15,
+        "image": "p5.jpg",
+        "product_id": "prod_RIogXgBH58wkdA"},
+        "price_id":"price_1QQD3TDKgovMDMcPloR0CuXR"
+    },
+    {  "product6":{
+        "name": "Lenovo ThinkVision T24i-10 Remis à neuf",
+        "price": 980.00,
+        "stock": 24,
+        "image": "p6.jpg",
+        "product_id": "prod_RIohpvhVmLb1xw"},
+        "price_id":"price_1QQD4JDKgovMDMcPLYbKNVGl"
+    }
+]

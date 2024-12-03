@@ -1,0 +1,97 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Preahvihear&display=swap');
+
+body{
+    
+    text-align: center;/*txt appear in the middle not start from the left*/
+    display: flex;
+    justify-content: center; /*cnter text horizontally inside a div */
+    align-items: center;
+    flex-direction: column;
+    font-family: 'poppins',sans-serif;
+    background-color: #1e2124;
+    color: #fff;
+}
+
+.head{
+    flex-direction: column;
+    width: 800px;
+    text-align: center;/*txt appear in the middle not start from the left*/
+    display: flex;
+    justify-content: center; /*cnter text horizontally inside a div */
+    align-items: center;/*cntr a div horizentally after using display:flex*/
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #282b30;
+}
+.input-text{
+    flex-direction: row;
+    margin-bottom: 15px;
+}
+.tasks{
+    width: 800px;
+    margin-top:  10px ;
+    background-color: #282b30;
+    text-align: left;/*txt appear in the middle not start from the left*/
+    display: flex;
+    justify-content: left; /*cnter text horizontally inside a div */
+    align-items: center;/*cntr a div horizentally after using display:flex*/
+    border-radius: 10px;
+    padding: 10px;
+    
+
+}
+button{
+    color: #fff;
+    font-family:'poppins',sans-serif;
+    font-weight: bold;
+    width: 60px;
+    border: none;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    transform:translate(-20px,0) ;
+    padding: 6px;
+    background-color: #7289da;
+    cursor: pointer;
+    
+}
+input{
+    border-radius: 4px;
+    width: 300px;
+    
+    background-color: aliceblue;
+    font-family:'poppins',sans-serif;
+    padding: 6px;
+    border: none;
+    outline: none;
+}
+ul li{
+    list-style: none;
+    padding: 12px 8px 7px 10px;
+    user-select: none;
+    cursor: pointer;
+    position :relative;
+
+
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/unch.png);
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    right: 55px;
+
+}
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+    
+}
+ul li.checked::before{
+    background-image: url(images/checked.png);
+}

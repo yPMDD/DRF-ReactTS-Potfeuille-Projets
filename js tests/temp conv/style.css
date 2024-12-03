@@ -1,0 +1,81 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background: #121315;
+}
+
+.form {
+    background: #2E2F38;
+    display: block; 
+    border-radius: 20px;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 10%;
+    padding: 20px; 
+    text-align: center; 
+}
+
+h2 {
+    color: #fff;
+    font-weight: bold;
+}
+
+label {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    display: inline-flex; 
+    align-items: center; 
+    color: #fff;
+    margin-bottom: 10px; 
+}
+
+input[type="radio"] {
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    margin-right: 8px; 
+}
+
+  
+.textbox{
+    width: 150px;
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    color: #333333;
+    font-size: 18px;
+    transition: 0.3s;
+    text-align: center;
+}
+p{  
+    
+    
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 20px;
+}
+button{
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    outline:#120f41;
+    border:#120f41;
+    background: #120f41;
+    color: #fff;
+    cursor: pointer;
+}
+button:hover{
+    
+    box-shadow: 0 4px 8px grey;
+    transition: .3s;
+}
+.con{
+    
+    margin-top: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
