@@ -22,7 +22,7 @@
     </div>
     <div class="tit">
         <p>Password
-            <a href="#" class="forgot_mdp">Forgot password ? </a>
+            <a href="email.php" class="forgot_mdp">Forgot password ? </a>
         </p>
     
         </div>
