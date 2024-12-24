@@ -11,7 +11,7 @@
         <input type="text" name="mdp"><br>
         <label for="nmdp">Re-enter password</label>
         <input type="text" name="nmdp"><br>
-
+        <button type="submit">submit</button>
     </form>
 </body>
 </html>

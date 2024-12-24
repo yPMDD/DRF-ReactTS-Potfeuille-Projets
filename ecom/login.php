@@ -45,7 +45,7 @@
 $db_server = "localhost";
 $db_user = "root";
 $db_pass = "";
-$db_name = "evolution";
+$db_name = "square";
 
 
 try {
