@@ -29,7 +29,7 @@
         if(mdplen<=0){
             result.textContent = "Invalid length";
             return "" ;
-        };
+        };wqweqwe
         if(allowedchars.length===0){
             result.textContent = "No character type selected";
             return "" ;
