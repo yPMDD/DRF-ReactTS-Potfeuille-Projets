@@ -3,6 +3,7 @@
 #include <string>
 #include <cstdlib>
 #include <algorithm>
+#include <random>
 using namespace std;
 
 
@@ -67,7 +68,7 @@ public:
     void supprimerTerrain(int index) {
         if (index >= 0 && index < terrains.size()) {
             terrains.erase(terrains.begin() + index);
-            cout << "Terrain supprimé avec succès." << endl;
+            cout << "Terrain supprimï¿½ avec succï¿½s." << endl;
         } else {
             cout << "Terrain introuvable." << endl;
         }
@@ -80,7 +81,7 @@ public:
             }
 
         }
-        throw runtime_error("Terrain non trouvé.");
+        throw runtime_error("Terrain non trouvï¿½.");
     }
 
     void afficherTousLesTerrains() const {
@@ -88,7 +89,7 @@ public:
             cout << "Aucun terrain disponible." << endl;
         } else {
             for (const auto& terrain : terrains) {
-                cout << "Terrain : " << terrain.getNom() << ", Capacité : " << terrain.getCapacite() << endl;
+                cout << "Terrain : " << terrain.getNom() << ", Capacitï¿½ : " << terrain.getCapacite() << endl;
             }
         }
     }
@@ -99,7 +100,7 @@ public:
 
     Terrain& getTerrainAleatoire() {
         if (terrains.empty()) {
-            throw runtime_error("Aucun terrain disponible pour sélectionner un terrain aléatoire.");
+            throw runtime_error("Aucun terrain disponible pour sï¿½lectionner un terrain alï¿½atoire.");
         }
 
         int index = rand() % terrains.size();
@@ -124,7 +125,7 @@ public:
         });
         if (it != joueurs.end()) {
             joueurs.erase(it);
-            cout << "Joueur supprimé avec succès." << endl;
+            cout << "Joueur supprimï¿½ avec succï¿½s." << endl;
         } else {
             cout << "Joueur introuvable." << endl;
         }
@@ -133,12 +134,12 @@ public:
     Joueur* rechercherJoueur(int id) {
         for (auto& joueur : joueurs) {
             if (joueur.getId() == id) {
-                cout << "Joueur trouvé :\n";
+                cout << "Joueur trouvï¿½ :\n";
                 joueur.afficherInfo();
                 return &joueur;
             }
         }
-        cout << "Joueur non trouvé !" << endl;
+        cout << "Joueur non trouvï¿½ !" << endl;
         return nullptr;
     }
 
@@ -168,7 +169,7 @@ private:
 
 public:
     Ticket(string phase, Terrain& terrain) : phase(phase), terrain(terrain) {
-        if (phase == "Huitièmes") {
+        if (phase == "Huitiï¿½mes") {
             prix = 50;
         } else if (phase == "Quarts") {
             prix = 75 ;
@@ -190,10 +191,10 @@ public:
      bool reserver() {
         if (terrain.getCapacite() > 0) {
             terrain.decrementerCapacite();
-            cout << "Ticket réservé avec succès pour " << phase << ". Prix: " << prix << ".\n";
+            cout << "Ticket rï¿½servï¿½ avec succï¿½s pour " << phase << ". Prix: " << prix << ".\n";
             return true;
         }
-        cout << "Désolé, il n'y a plus de place pour cette phase.\n";
+        cout << "Dï¿½solï¿½, il n'y a plus de place pour cette phase.\n";
         return false;
     }
 };
@@ -206,12 +207,12 @@ public:
 
 
         if (joueurs.size() != 2 && joueurs.size() != 4 && joueurs.size() != 8 && joueurs.size() != 16) {
-            cout << "Le tournoi nécessite 2, 4, 8 ou 16 joueurs pour démarrer.\n";
+            cout << "Le tournoi nï¿½cessite 2, 4, 8 ou 16 joueurs pour dï¿½marrer.\n";
             return;
         }
 
 
-        string phases[] = {"Huitièmes", "Quarts", "Demi-finales", "Finale"};
+        string phases[] = {"Huitiï¿½mes", "Quarts", "Demi-finales", "Finale"};
         int phaseIndex = 0;
 
         if (joueurs.size() == 16) {
@@ -300,7 +301,7 @@ int main() {
 }
             case 2: {
                 int id;
-                cout << "Entrez l'ID du joueur à supprimer : ";
+                cout << "Entrez l'ID du joueur ï¿½ supprimer : ";
                 cin >> id;
                 gestionJoueurs.supprimerJoueur(id);
                 break;
@@ -314,14 +315,14 @@ int main() {
                 int capacite;
                 cout << "Entrez le nom du terrain : ";
                 cin >> nomTerrain;
-                cout << "Entrez la capacité du terrain : ";
+                cout << "Entrez la capacitï¿½ du terrain : ";
                 cin >> capacite;
                 gestionTerrain.ajouterTerrain(Terrain(nomTerrain, capacite));
                 break;
             }
             case 5: {
                 int index;
-                cout << "Entrez l'indice du terrain à supprimer : ";
+                cout << "Entrez l'indice du terrain ï¿½ supprimer : ";
                 cin >> index;
                 gestionTerrain.supprimerTerrain(index);
                 break;
@@ -332,18 +333,18 @@ int main() {
             }
             case 7: {
                 int id;
-                cout << "Entrez l'ID du joueur à rechercher : ";
+                cout << "Entrez l'ID du joueur ï¿½ rechercher : ";
                 cin >> id;
                 gestionJoueurs.rechercherJoueur(id);
                 break;
             }
             case 8: {
                 string nomTerrain;
-                cout << "Entrez le nom du terrain à rechercher : ";
+                cout << "Entrez le nom du terrain ï¿½ rechercher : ";
                 cin >> nomTerrain;
                 try {
                     Terrain& terrain = gestionTerrain.rechercherTerrain(nomTerrain);
-                    cout << "Terrain trouvé : " << terrain.getNom() << ", Capacité : " << terrain.getCapacite() << endl;
+                    cout << "Terrain trouvï¿½ : " << terrain.getNom() << ", Capacitï¿½ : " << terrain.getCapacite() << endl;
                 } catch (const exception& e) {
                     cout << e.what() << endl;
                 }
@@ -357,7 +358,7 @@ int main() {
                 string nomJoueur, nomTerrain, phase;
                 cout << "Entrez votre nom : ";
                 cin >> nomJoueur;
-                cout << "Entrez la phase (Huitièmes, Quarts, Demi-finales, Finale) : ";
+                cout << "Entrez la phase (Huitiï¿½mes, Quarts, Demi-finales, Finale) : ";
                 cin >> phase;
                 cout << "Entrez le nom du terrain : ";
                 cin >> nomTerrain;
@@ -369,7 +370,7 @@ int main() {
 
 
                         if (ticket.reserver()) {
-                            cout << "Ticket acheté avec succès pour " << nomJoueur << " à " << nomTerrain << ". Prix du ticket: " << ticket.getPrix() << " euros.\n";
+                            cout << "Ticket achetï¿½ avec succï¿½s pour " << nomJoueur << " ï¿½ " << nomTerrain << ". Prix du ticket: " << ticket.getPrix() << " euros.\n";
                         } else {
                             cout << "Impossible d'acheter le ticket, terrain complet.\n";
                         }
@@ -381,7 +382,7 @@ int main() {
                 break;
             }
             default:
-                cout << "Option invalide, veuillez réessayer." << endl;
+                cout << "Option invalide, veuillez rï¿½essayer." << endl;
         }
     } while (choix != 11);
 

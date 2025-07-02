@@ -146,4 +146,3 @@ circuit circuitmin(vector<circuit>& tab) {
 
 
 
-
