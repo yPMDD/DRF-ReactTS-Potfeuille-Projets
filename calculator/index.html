@@ -1,69 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="calc_styles.css">
-    <link rel="icon" href="image-removebg-preview.webp" type="image/x-icon">
-    <title>Calculator</title>
-    
+	<head>
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="calc_styles.css" />
+		<link rel="icon" href="image-removebg-preview.webp" type="image/x-icon" />
+		<title>Calculator</title>
+	</head>
+	<body>
+		<div class="box">
+			<input class="toggle" type="checkbox" id="toggle" />
+			<label class="dl" for="toggle">
+				<svg
+					viewBox="0 0 24 24"
+					class="sun"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+				>
+					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+					<g
+						id="SVGRepo_tracerCarrier"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					></g>
+					<g id="SVGRepo_iconCarrier">
+						<path
+							d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z"
+							stroke="#4B5EFC"
+							stroke-width="2"
+						></path>
+						<path
+							d="M12 5V3"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M17 7L19 5"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M19 12H21"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M17 17L19 19"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M12 19V21"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M7 17L5 19"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M5 12H3"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+						<path
+							d="M5 5L7 7"
+							stroke="#4B5EFC"
+							stroke-width="2"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></path>
+					</g>
+				</svg>
+				<svg
+					viewBox="-2.4 -2.4 28.80 28.80"
+					class="moon"
+					fill="none"
+					xmlns="http://www.w3.org/2000/svg"
+					stroke="#4B5EFC"
+					stroke-width="0.00024000000000000003"
+				>
+					<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+					<g
+						id="SVGRepo_tracerCarrier"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						stroke="#CCCCCC"
+						stroke-width="0.096"
+					></g>
+					<g id="SVGRepo_iconCarrier">
+						<path
+							d="M21 11.9486C21 16.8857 16.8776 21 11.7247 21C7.80842 21 4.40746 18.84 3.06769 15.5486C2.96464 15.24 2.96464 14.9314 3.17075 14.7257C3.37687 14.52 3.68605 14.4171 3.99523 14.52C4.51052 14.6229 5.02582 14.7257 5.43806 14.7257C9.56043 14.7257 12.8583 11.5371 12.8583 7.52571C12.8583 6.29143 12.6522 5.26286 12.0338 4.02857C11.9308 3.82286 11.9308 3.51429 12.1369 3.30857C12.343 3.10286 12.5491 3 12.8583 3C17.496 3.51429 21 7.42286 21 11.9486Z"
+							fill="#4B5EFC"
+						></path>
+					</g>
+				</svg>
+			</label>
 
-    
-</head>
-<body>
-    <div class="box">
-            
-            <input class="toggle" type="checkbox" id="toggle" >
-            <label class="dl" for="toggle">
-                <svg viewBox="0 0 24 24" class="sun" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#4B5EFC" stroke-width="2"></path> <path d="M12 5V3" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 7L19 5" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M19 12H21" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M17 17L19 19" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M12 19V21" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M7 17L5 19" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5 12H3" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M5 5L7 7" stroke="#4B5EFC" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>    
-                <svg viewBox="-2.4 -2.4 28.80 28.80" class="moon" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#4B5EFC" stroke-width="0.00024000000000000003"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.096"></g><g id="SVGRepo_iconCarrier"> <path d="M21 11.9486C21 16.8857 16.8776 21 11.7247 21C7.80842 21 4.40746 18.84 3.06769 15.5486C2.96464 15.24 2.96464 14.9314 3.17075 14.7257C3.37687 14.52 3.68605 14.4171 3.99523 14.52C4.51052 14.6229 5.02582 14.7257 5.43806 14.7257C9.56043 14.7257 12.8583 11.5371 12.8583 7.52571C12.8583 6.29143 12.6522 5.26286 12.0338 4.02857C11.9308 3.82286 11.9308 3.51429 12.1369 3.30857C12.343 3.10286 12.5491 3 12.8583 3C17.496 3.51429 21 7.42286 21 11.9486Z" fill="#4B5EFC"></path> </g></svg>
-            </label>
-        
-                <label id="eq"></label>
-                <label id="result" >0</label>
-                 
-                <div class="r1">
+			<label id="eq"></label>
+			<label id="result">0</label>
 
-                    <button class="C" data-value="AC" id="c">C</button>
-                    <button class="plus_moins" data-value="*(-1)" id="plus_moins"><svg class="plus_minus" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M20 4L4 20" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M4 7H7M10 7H7M7 7V4M7 7V10" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M14 17H17H20" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></g></svg></button>
-                    
-                     <button class="prcc" data-value="%" id="0l0"><svg class="prc" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M18.707 5.293a1 1 0 0 1 0 1.414l-12 12a1 1 0 0 1-1.414-1.414l12-12a1 1 0 0 1 1.414 0zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4z" fill="#fff"></path></g></svg></button>
-                    <button class="divi" data-value="/" id="divide"><svg class="divi" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6.34277 12L17.6565 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> <circle cx="12" cy="16.9498" r="1.5" transform="rotate(45 12 16.9498)" fill="#fff"></circle> <circle cx="12" cy="7.05024" r="1.5" transform="rotate(45 12 7.05024)" fill="#fff"></circle> </g></svg></button>
-                   
-                </div>
-            
-                <div class="r2">
-                    <button class="b7" data-value="7" id="7">7</button>
-                    <button class="b8" data-value="8" id="8">8</button>
-                    <button class="b9" data-value="9" id="9">9</button>
-                    <button class="mul" data-value="*" id="multiply"><svg version="1.1" class="multi" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .linesandangles_een{fill:#fff;} </style> <path class="linesandangles_een" d="M17.414,16l4.95,4.95l-1.414,1.414L16,17.414l-4.95,4.95L9.636,20.95l4.95-4.95l-4.95-4.95 l1.414-1.414l4.95,4.95l4.95-4.95l1.414,1.414L17.414,16z"></path> </g></svg></button>
+			<div class="r1">
+				<button class="C" data-value="AC" id="c">C</button>
+				<button class="plus_moins" data-value="*(-1)" id="plus_moins">
+					<svg
+						class="plus_minus"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M20 4L4 20"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+							></path>
+							<path
+								d="M4 7H7M10 7H7M7 7V4M7 7V10"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+							></path>
+							<path
+								d="M14 17H17H20"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+							></path>
+						</g>
+					</svg>
+				</button>
 
-                </div>
-                <div class="r3">
-                    <button class="b4" data-value="4" id="4">4</button>
-                    <button class="b5" data-value="5" id="5">5</button>
-                    <button class="b6" data-value="6" id="6">6</button>
-                    <button class="sub" data-value="-" id="subtract"><svg viewBox="0 0 24 24" class="minus" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12L18 12" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
+				<button class="prcc" data-value="%" id="0l0">
+					<svg
+						class="prc"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M18.707 5.293a1 1 0 0 1 0 1.414l-12 12a1 1 0 0 1-1.414-1.414l12-12a1 1 0 0 1 1.414 0zM17 19a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM7 9a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+								fill="#fff"
+							></path>
+						</g>
+					</svg>
+				</button>
+				<button class="divi" data-value="/" id="divide">
+					<svg
+						class="divi"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M6.34277 12L17.6565 12"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+							<circle
+								cx="12"
+								cy="16.9498"
+								r="1.5"
+								transform="rotate(45 12 16.9498)"
+								fill="#fff"
+							></circle>
+							<circle
+								cx="12"
+								cy="7.05024"
+								r="1.5"
+								transform="rotate(45 12 7.05024)"
+								fill="#fff"
+							></circle>
+						</g>
+					</svg>
+				</button>
+			</div>
 
-                </div>
-                <div class="r4">
-                    <button class="b1" data-value="1" id="1">1</button>
-                    <button class="b2" data-value="2" id="2">2</button>
-                    <button class="b3" data-value="3" id="3">3</button>
-                    <button class="add" data-value="+" id="add"><svg class="plus" width="256px" height="256px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M6 12H18M12 6V18" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
-
-                </div>
-                <div class="r5">
-                    
-                    <button class="deci" data-value="." id="decimal"><p>.</p></button>
-                    <button class="b0" data-value="0" id="0">0</button>
-                    <button class="ms7" data-value="DEL" id="ms7"><svg class="ms7" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M7.50006 5.5L4.05262 10.7909C3.71387 11.3107 3.69732 11.9772 4.00984 12.5133L7.50006 18.5H18.8588C19.7651 18.5 20.4999 17.7653 20.4999 16.8589V7.14109C20.4999 6.23474 19.7651 5.5 18.8588 5.5H7.50006Z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M10 8.5L17 15.5" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M10 15.5L16.9303 8.49996" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg></button>
-                    <button class="equals" data-value="=" id="equals">=</button>
-                </div>
-        
-
-    </div>
-    <script src="script.js"></script>  
-</body>
-</html>     
+			<div class="r2">
+				<button class="b7" data-value="7" id="7">7</button>
+				<button class="b8" data-value="8" id="8">8</button>
+				<button class="b9" data-value="9" id="9">9</button>
+				<button class="mul" data-value="*" id="multiply">
+					<svg
+						version="1.1"
+						class="multi"
+						id="Uploaded to svgrepo.com"
+						xmlns="http://www.w3.org/2000/svg"
+						xmlns:xlink="http://www.w3.org/1999/xlink"
+						viewBox="0 0 32 32"
+						xml:space="preserve"
+						fill="#000000"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<style type="text/css">
+								.linesandangles_een {
+									fill: #fff;
+								}
+							</style>
+							<path
+								class="linesandangles_een"
+								d="M17.414,16l4.95,4.95l-1.414,1.414L16,17.414l-4.95,4.95L9.636,20.95l4.95-4.95l-4.95-4.95 l1.414-1.414l4.95,4.95l4.95-4.95l1.414,1.414L17.414,16z"
+							></path>
+						</g>
+					</svg>
+				</button>
+			</div>
+			<div class="r3">
+				<button class="b4" data-value="4" id="4">4</button>
+				<button class="b5" data-value="5" id="5">5</button>
+				<button class="b6" data-value="6" id="6">6</button>
+				<button class="sub" data-value="-" id="subtract">
+					<svg
+						viewBox="0 0 24 24"
+						class="minus"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M6 12L18 12"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+						</g>
+					</svg>
+				</button>
+			</div>
+			<div class="r4">
+				<button class="b1" data-value="1" id="1">1</button>
+				<button class="b2" data-value="2" id="2">2</button>
+				<button class="b3" data-value="3" id="3">3</button>
+				<button class="add" data-value="+" id="add">
+					<svg
+						class="plus"
+						width="256px"
+						height="256px"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M6 12H18M12 6V18"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+						</g>
+					</svg>
+				</button>
+			</div>
+			<div class="r5">
+				<button class="deci" data-value="." id="decimal"><p>.</p></button>
+				<button class="b0" data-value="0" id="0">0</button>
+				<button class="ms7" data-value="DEL" id="ms7">
+					<svg
+						class="ms7"
+						viewBox="0 0 24 24"
+						fill="none"
+						xmlns="http://www.w3.org/2000/svg"
+					>
+						<g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+						<g
+							id="SVGRepo_tracerCarrier"
+							stroke-linecap="round"
+							stroke-linejoin="round"
+						></g>
+						<g id="SVGRepo_iconCarrier">
+							<path
+								d="M7.50006 5.5L4.05262 10.7909C3.71387 11.3107 3.69732 11.9772 4.00984 12.5133L7.50006 18.5H18.8588C19.7651 18.5 20.4999 17.7653 20.4999 16.8589V7.14109C20.4999 6.23474 19.7651 5.5 18.8588 5.5H7.50006Z"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+							<path
+								d="M10 8.5L17 15.5"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+							<path
+								d="M10 15.5L16.9303 8.49996"
+								stroke="#fff"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							></path>
+						</g>
+					</svg>
+				</button>
+				<button class="equals" data-value="=" id="equals">=</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
