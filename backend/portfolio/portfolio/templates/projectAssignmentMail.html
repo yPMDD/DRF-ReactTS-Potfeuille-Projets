@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Projet Assigné</title>
+	</head>
+	<body
+		style="
+			margin: 0;
+			padding: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f6f8fb;
+		"
+	>
+		<table
+			width="100%"
+			cellpadding="0"
+			cellspacing="0"
+			style="padding: 40px 0; background-color: #f6f8fb"
+		>
+			<tr>
+				<td align="center">
+					<table
+						width="600"
+						cellpadding="0"
+						cellspacing="0"
+						style="
+							background-color: #ffffff;
+							border-radius: 8px;
+							padding: 40px;
+							box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+						"
+					>
+						<tr>
+							<td align="center" style="padding-bottom: 20px">
+								<h2 style="margin: 0; font-size: 22px; color: #1e293b">
+									Nouveau Projet Assigné
+								</h2>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size: 16px; color: #334155; padding-bottom: 20px">
+								Bonjour <strong>{{ user_fullname }}</strong>,<br /><br />
+								Vous avez été assigné au projet suivant :
+							</td>
+						</tr>
+						<tr>
+							<td
+								style="
+									background-color: #f1f5f9;
+									padding: 16px;
+									border-radius: 6px;
+									font-size: 16px;
+									color: #1e293b;
+								"
+							>
+								<strong> Nom du projet :</strong> {{ project_name }}<br />
+								<strong> Date de début :</strong> {{ start_date }}<br />
+								<strong> Date de fin :</strong> {{ end_date }}<br />
+								<strong> Assigné par :</strong> {{ assigned_by }}<br /><br />
+								<strong> Description du projet :</strong> {{ description }}<br />
+							</td>
+						</tr>
+						<tr>
+							<td align="center" style="padding: 30px 0">
+								<a
+									href="{{ project_url }}"
+									style="
+										background-color: #2563eb;
+										color: #ffffff;
+										text-decoration: none;
+										padding: 12px 24px;
+										border-radius: 6px;
+										font-size: 16px;
+									"
+								>
+									Voir le projet
+								</a>
+							</td>
+						</tr>
+						<tr>
+							<td style="font-size: 14px; color: #94a3b8; text-align: center">
+								Merci de vérifier les détails du projet dès que possible.
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
